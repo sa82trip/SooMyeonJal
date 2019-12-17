@@ -9,31 +9,31 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
+    
     @IBAction func stampMoring(_ sender: UIButton) {
         print("Good Morning")
-        let currentTime = Date()
-        
-        let formatter = DateFormatter()
-        formatter.dateStyle = .long
-        formatter.timeStyle = .medium
-        print(formatter.string(from: currentTime))
-//        formatter.dateFormat = "yyyy/MM/dd HH:mm"
+        let now = makeCurrentTime()
+        print(now)
     }
     
     @IBAction func stampNight(_ sender: UIButton) {
         print("Good night")
+        let now  = makeCurrentTime()
+        print(now)
+    }
+    
+    func makeCurrentTime()-> String{
         let currentTime = Date()
-        
         let formatter = DateFormatter()
         formatter.dateStyle = .long
         formatter.timeStyle = .medium
-        print(formatter.string(from: currentTime))
+        
+        return formatter.string(from: currentTime)
     }
     
 }
