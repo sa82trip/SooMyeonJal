@@ -15,6 +15,26 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func stampMoring(_ sender: UIButton) {
+        print("Good Morning")
+        let currentTime = Date()
+        
+        let formatter = DateFormatter()
+        formatter.dateStyle = .long
+        formatter.timeStyle = .medium
+        print(formatter.string(from: currentTime))
+//        formatter.dateFormat = "yyyy/MM/dd HH:mm"
+    }
+    
+    @IBAction func stampNight(_ sender: UIButton) {
+        print("Good night")
+        let currentTime = Date()
+        
+        let formatter = DateFormatter()
+        formatter.dateStyle = .long
+        formatter.timeStyle = .medium
+        print(formatter.string(from: currentTime))
+    }
+    
 }
 

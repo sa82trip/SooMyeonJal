@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		6F2334BA23A7A362001F7918 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2334B923A7A362001F7918 /* AppDelegate.swift */; };
-		6F2334BC23A7A362001F7918 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2334BB23A7A362001F7918 /* SceneDelegate.swift */; };
 		6F2334BE23A7A363001F7918 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2334BD23A7A363001F7918 /* ViewController.swift */; };
 		6F2334C123A7A363001F7918 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F2334BF23A7A363001F7918 /* Main.storyboard */; };
 		6F2334C323A7A364001F7918 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F2334C223A7A364001F7918 /* Assets.xcassets */; };
@@ -18,7 +17,6 @@
 /* Begin PBXFileReference section */
 		6F2334B623A7A362001F7918 /* SooMyeonJal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SooMyeonJal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F2334B923A7A362001F7918 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6F2334BB23A7A362001F7918 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		6F2334BD23A7A363001F7918 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6F2334C023A7A363001F7918 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6F2334C223A7A364001F7918 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -57,7 +55,6 @@
 			isa = PBXGroup;
 			children = (
 				6F2334B923A7A362001F7918 /* AppDelegate.swift */,
-				6F2334BB23A7A362001F7918 /* SceneDelegate.swift */,
 				6F2334BD23A7A363001F7918 /* ViewController.swift */,
 				6F2334BF23A7A363001F7918 /* Main.storyboard */,
 				6F2334C223A7A364001F7918 /* Assets.xcassets */,
@@ -140,7 +137,6 @@
 			files = (
 				6F2334BE23A7A363001F7918 /* ViewController.swift in Sources */,
 				6F2334BA23A7A362001F7918 /* AppDelegate.swift in Sources */,
-				6F2334BC23A7A362001F7918 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +283,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HZ65WPNS34;
 				INFOPLIST_FILE = SooMyeonJal/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -305,6 +302,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HZ65WPNS34;
 				INFOPLIST_FILE = SooMyeonJal/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
