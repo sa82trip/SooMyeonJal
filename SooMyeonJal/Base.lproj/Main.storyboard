@@ -46,9 +46,30 @@
                                     <action selector="stampMoring:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fva-8Y-jw8"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="wakeupTime" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lvq-2B-Lvu">
+                                <rect key="frame" x="159" y="294" width="96" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sleepTime" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NsX-nb-eLb">
+                                <rect key="frame" x="168" y="442.5" width="78" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G4l-9P-OrO">
+                                <rect key="frame" x="190" y="548" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="clear"/>
+                                <connections>
+                                    <action selector="clearTime:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jZ5-Qs-NCy"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="Lvq-2B-Lvu" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="4IL-Up-4rL"/>
                             <constraint firstItem="8sR-sq-ZWZ" firstAttribute="top" secondItem="jiy-su-Dig" secondAttribute="bottom" constant="113" id="4tb-Bd-Ccv"/>
                             <constraint firstItem="nUW-ct-w3s" firstAttribute="leading" secondItem="8sR-sq-ZWZ" secondAttribute="trailing" constant="44" id="5fq-Ls-Qyk"/>
                             <constraint firstItem="jiy-su-Dig" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Adv-kI-3cs"/>
@@ -57,10 +78,18 @@
                             <constraint firstItem="2tG-Ts-0vi" firstAttribute="top" secondItem="jiy-su-Dig" secondAttribute="bottom" constant="113" id="Nq1-p3-Heh"/>
                             <constraint firstItem="2tG-Ts-0vi" firstAttribute="leading" secondItem="nUW-ct-w3s" secondAttribute="trailing" constant="50" id="XD8-de-5bV"/>
                             <constraint firstItem="8sR-sq-ZWZ" firstAttribute="firstBaseline" secondItem="2tG-Ts-0vi" secondAttribute="firstBaseline" id="dhn-A0-uMZ"/>
+                            <constraint firstItem="NsX-nb-eLb" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="hBF-EV-aIc"/>
+                            <constraint firstItem="Lvq-2B-Lvu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="250" id="k23-Cf-Lea"/>
                             <constraint firstItem="jiy-su-Dig" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="qa3-fk-OMW"/>
+                            <constraint firstItem="NsX-nb-eLb" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="uqB-JH-YgV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="morningButton" destination="8sR-sq-ZWZ" id="C7b-ZT-x3p"/>
+                        <outlet property="showsTime" destination="Lvq-2B-Lvu" id="M21-yS-nFG"/>
+                        <outlet property="showsTimeBed" destination="NsX-nb-eLb" id="ULH-tr-KCS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
