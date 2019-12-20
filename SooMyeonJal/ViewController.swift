@@ -10,14 +10,24 @@ import UIKit
 
 class ViewController: UIViewController {
     
-     
+    
     
     @IBOutlet weak var morningButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        showsTime.text = UserDefaults.standard.string(forKey: "morning")
-        showsTimeBed.text = UserDefaults.standard.string(forKey: "night")
+        
+        let morning = UserDefaults.standard.object(forKey: "morning") as! Date
+        let night = UserDefaults.standard.object(forKey: "night") as! Date
+        showsTime.text = morning.description(with: Locale.current)
+        showsTimeBed.text = night.description(with: Locale.current)
+        
+        if(morning < night){
+            print("night")
+        }else {
+            print("morning")
+        }
+        
         
     }
     
@@ -30,12 +40,14 @@ class ViewController: UIViewController {
         print("Good Morning")
         let now = makeCurrentTime()
         print(now)
-       
-       //누르면 버튼 비활성화 하기. 저녁 되면 풀린다.
+        let testDate = Date()
+        print(testDate.description(with: Locale.current))
+        //누르면 버튼 비활성화 하기. 저녁 되면 풀린다.
         morningButton.isUserInteractionEnabled=false
         
         //누른 시간 저장하기
-        UserDefaults.standard.set(now, forKey: "morning")
+        UserDefaults.standard.set(testDate, forKey: "morning")
+        
         
     }
     
@@ -43,8 +55,10 @@ class ViewController: UIViewController {
         print("Good night")
         let now  = makeCurrentTime()
         print(now)
+        let testDate = Date()
+        print(testDate.description(with: Locale.current))
+        UserDefaults.standard.set(testDate, forKey: "night")
         
-        UserDefaults.standard.set(now, forKey: "night")
     }
     
     func makeCurrentTime()-> String{
